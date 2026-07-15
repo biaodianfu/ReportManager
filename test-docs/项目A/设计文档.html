@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: "Microsoft YaHei", sans-serif; padding: 40px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; min-height: 100vh; }
+    h1 { font-size: 32px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 30px; }
+    .item { background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: 12px; padding: 20px; }
+  </style>
+</head>
+<body>
+  <h1>项目A - 设计文档</h1>
+  <p>系统架构设计和技术选型</p>
+  <div class="grid">
+    <div class="item"><h3>前端</h3><p>React 18 + TypeScript + Tailwind CSS</p></div>
+    <div class="item"><h3>后端</h3><p>Rust + Actix-Web + PostgreSQL</p></div>
+    <div class="item"><h3>部署</h3><p>Docker + Kubernetes + CI/CD</p></div>
+  </div>
+</body>
+</html>

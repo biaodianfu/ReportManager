@@ -1,0 +1,13 @@
+{
+  "name": "report-manager",
+  "version": "0.2.0",
+  "description": "ReportManager - HTML/Markdown 文档管理工具",
+  "scripts": {
+    "tauri": "tauri",
+    "dev": "tauri dev",
+    "build": "tauri build"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2"
+  }
+}

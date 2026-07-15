@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ReportManager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- 左侧文件树侧边栏 -->
+    <div id="sidebar">
+      <div id="sidebar-header">
+        <div id="toolbar">
+          <button id="btn-open-root" title="打开根目录">📂 打开目录</button>
+          <button id="btn-new-folder" title="新建文件夹">📁＋</button>
+          <button id="btn-refresh" title="刷新">🔄</button>
+          <button id="btn-collapse" title="折叠侧边栏">◀</button>
+        </div>
+      </div>
+      <div id="search-box">
+        <input type="text" id="search-input" placeholder="搜索 HTML / Markdown 文件..." />
+      </div>
+      <div id="tree-container">
+        <div id="tree" class="tree"></div>
+      </div>
+    </div>
+    <div id="resizer"></div>
+
+    <!-- 折叠状态下显示的展开按钮 -->
+    <div id="sidebar-expand" title="展开侧边栏">▶</div>
+
+    <!-- 主内容区 -->
+    <div id="main-content">
+      <div id="content-header">
+        <span id="current-file-path">请从左侧选择一个文档</span>
+        <button id="btn-outline" title="大纲导航">📑 大纲</button>
+      </div>
+      <div id="viewer-container">
+        <iframe id="html-viewer" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-modals"></iframe>
+        <div id="empty-state">
+          <div class="empty-icon">📄</div>
+          <p>选择一个 HTML 或 Markdown 文件以预览</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右侧大纲导航栏 -->
+    <div id="outline-resizer" class="hidden"></div>
+    <div id="outline-sidebar" class="hidden">
+      <div id="outline-header">
+        <span>📑 大纲导航</span>
+        <button id="btn-outline-close" title="关闭">✕</button>
+      </div>
+      <div id="outline-container">
+        <div id="outline-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 拖拽提示 -->
+  <div id="drop-overlay"></div>
+  <div id="drop-hint">📁 松开以复制文件到此文件夹</div>
+
+  <!-- 右键菜单 -->
+  <div id="context-menu" class="context-menu" style="display: none;"></div>
+
+  <script src="marked.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
